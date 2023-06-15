@@ -35,12 +35,12 @@
 // -----------------------------------------------------------------------------------------
 // |  ~   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | ESC  |     |     |     |     |     |   |  -  |  _  |  +  |  {  |  }  |  "|" |
-// | SHFT |     |     |     |     |     |   |     | VOL-| VOL+| PLAY|     | ARROW|
+// | SHFT |     |     |     |     |     |   |     | VOL-| VOL+| PLAY| "|" |      |
 //                    |     |     | SPC |   | ENT | ADJ |     |
         bindings = <
    &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS     &kp ASTRK    &kp LPAR &kp RPAR &kp BSPC
    &kp ESC   &trans   &trans &trans   &trans   &trans    &trans    &kp UNDER    &kp PLUS     &kp LBRC &kp RBRC &kp PIPE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans    &trans    &kp K_VOL_DN &kp K_VOL_UP &kp K_PP &trans   &trans
+   &kp LSHFT &trans   &trans &trans   &trans   &trans    &trans    &kp K_VOL_DN &kp K_VOL_UP &kp K_PP &kp PIPE &trans
                              &trans   &trans   &kp SPACE &kp RET   &trans       &trans
                         >;
       };
@@ -49,40 +49,40 @@
 // -----------------------------------------------------------------------------------------
 // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | ESC  | F1  | F2  | F3  |  F4 |  F5 |   | F6  |  -  |  =  | [   |  ]  |  \   |
-// | SHFT | F7  | F8  | F9  | F10 | F11 |   | F12 | VOL-| VOL+| PLAY|     |      |
+// | SHFT | F7  | F8  | F9  | F10 | F11 |   | F12 | VOL-| VOL+| PLAY| \   |      |
 //                    | CTRL| ADJ | SPC |   | ENT |     | GUI |
         bindings = <
    &kp GRAVE &kp N1  &kp N2 &kp N3    &kp N4  &kp N5    &kp N6  &kp N7       &kp N8       &kp N9   &kp N0   &kp BSPC
    &kp ESC   &kp F1  &kp F2 &kp F3    &kp F4  &kp F5    &kp F6  &kp MINUS    &kp EQUAL    &kp LBKT &kp RBKT &kp BSLH
-   &kp LSHFT &kp F7  &kp F8 &kp F9    &kp F10 &kp F11   &kp F12 &kp K_VOL_DN &kp K_VOL_UP &kp K_PP &trans   &trans
+   &kp LSHFT &kp F7  &kp F8 &kp F9    &kp F10 &kp F11   &kp F12 &kp K_VOL_DN &kp K_VOL_UP &kp K_PP &kp BSLH &trans
                             &kp LCTRL &trans  &kp SPACE &kp RET &trans       &kp LGUI
                         >;
       };
     numpad_layer {
     label = "NUMPAD";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |     |  7  |  8  |  9  |     | BKSP |
-// | ESC  |  A  |  S  |  D  |  F  |  G  |   |     |  4  |  5  |  6  |     |      |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |     |  1  |  2  |  3  |     |      |
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |     |  7  |  8  |  9  | BKSP| BKSP |
+// | ESC  |  A  |  S  |  D  |  F  |  G  |   |     |  4  |  5  |  6  |  '  |      |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |     |  1  |  2  |  3  | "|" |      |
 //                    |     |     | SPC |   | ENT |  0  |     |
         bindings = <
-   &kp TAB   &kp Q &kp W &kp E  &kp R  &kp T     &trans  &kp N7 &kp N8 &kp N9 &trans &kp BSPC
-   &kp ESC   &kp A &kp S &kp D  &kp F  &kp G     &trans  &kp N4 &kp N5 &kp N6 &trans &trans
-   &kp LSHFT &kp Z &kp X &kp C  &kp V  &kp B     &trans  &kp N1 &kp N2 &kp N3 &trans &trans
+   &kp TAB   &kp Q &kp W &kp E  &kp R  &kp T     &trans  &kp N7 &kp N8 &kp N9 &kp BSPC &kp BSPC
+   &kp ESC   &kp A &kp S &kp D  &kp F  &kp G     &trans  &kp N4 &kp N5 &kp N6 &kp SQT  &trans
+   &kp LSHFT &kp Z &kp X &kp C  &kp V  &kp B     &trans  &kp N1 &kp N2 &kp N3 &kp PIPE &trans
                          &trans &trans &kp SPACE &kp RET &kp N0 &trans
                         >;
       };
     arrow_layer {
     label = "ARROW";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |     |     |     |     |     | BKSP |
-// | ESC  |  A  |  S  |  D  |  F  |  G  |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |     |     |     |     |     |      |
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |     |     |     |     | BKSP| BKSP |
+// | ESC  |  A  |  S  |  D  |  F  |  G  |   | LFT | DWN |  UP | RGT |  '  |      |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |     |     |     |     | \   |      |
 //                    |     |     | SPC |   | ENT |     |     |
         bindings = <
-   &kp TAB   &kp Q &kp W &kp E  &kp R  &kp T     &trans   &trans   &trans &trans    &trans &kp BSPC
-   &kp ESC   &kp A &kp S &kp D  &kp F  &kp G     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT &kp Z &kp X &kp C  &kp V  &kp B     &trans   &trans   &trans &trans    &trans &trans
+   &kp TAB   &kp Q &kp W &kp E  &kp R  &kp T     &trans   &trans   &trans &trans    &kp BSPC &kp BSPC
+   &kp ESC   &kp A &kp S &kp D  &kp F  &kp G     &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT  &trans
+   &kp LSHFT &kp Z &kp X &kp C  &kp V  &kp B     &trans   &trans   &trans &trans    &kp BSLH &trans
                          &trans &trans &kp SPACE &kp RET  &trans   &trans
                         >;
       };
@@ -91,12 +91,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | MAYUS|     |     |     |     |     |   |     |     |     |     |     | MAYUS|
+// | MAYUS|     |     |     |     |     |   |     |     |     |     |MAYUS| MAYUS|
 //                    |     |     | SPC |   | ENT |     |     |
         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp CAPS   &trans       &trans       &trans       &trans       &trans       &trans   &trans   &trans &trans    &trans &kp CAPS
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans   &trans
+   &kp CAPS   &trans       &trans       &trans       &trans       &trans       &trans   &trans   &trans &trans    &kp CAPS &kp CAPS
                                         &trans       &trans       &kp SPACE    &kp RET  &trans   &trans
                         >;
       };
